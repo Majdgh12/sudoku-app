@@ -1,0 +1,155 @@
+/* Sudoku container */
+.sudoku-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+  }
+  
+  /* Control panel */
+  .controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .controls label {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  
+  .controls select {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .generate-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .generate-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Number selector */
+  .number-selector {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .number-button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    background-color: #ddd;
+    border: 2px solid #bbb;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .number-button.selected {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+  }
+  
+  /* Sudoku board */
+  .sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-gap: 2px;
+    border: 2px solid #333;
+  }
+  
+  .sudoku-cell {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  
+  .sudoku-cell:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Conflict styling */
+  .sudoku-cell.conflict {
+    background-color: #ffcccc;
+    border: 1px solid #ff6666;
+  }
+  
+  /* 3x3 sub-grid borders */
+  .sudoku-board > .sudoku-cell:nth-child(3n+1) {
+    border-left: 2px solid #333;
+  }
+  .sudoku-board > .sudoku-cell:nth-child(9n+1) {
+    border-top: 2px solid #333;
+  }
+  
+  /* Action buttons */
+  .check-button,
+  .solve-button,
+  .hint-button {
+    padding: 8px 12px;
+    font-size: 16px;
+    margin-top: 15px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .check-button:hover,
+  .solve-button:hover,
+  .hint-button:hover {
+    background-color: #0b7dda;
+  }
+  /* SudokuBoard.css */
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 2px;
+  }
+  
+  .cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .generated-cell {
+    color: #333;
+    font-weight: bold;
+    background-color: #f0f0f0; /* Darker background for generated cells */
+  }
+  
+  .conflict-cell {
+    background-color: #ffcccc; /* Red background to highlight conflicts */
+  }
+  
